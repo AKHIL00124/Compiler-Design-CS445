@@ -1,0 +1,11 @@
+#DRBC Testing production rules //1, 2a, 2b
+int main(){ //3b
+   for i = 0 to 100 do { // 18c, 19a
+      //20d, 19b, 20b, 20c
+      for j = 0 to 100 by 2 do 
+         if (true == true) then {numCandy += j;}
+         else while (true == false) do if (false != false) then numCandy = -100;
+     
+   }  
+}
+

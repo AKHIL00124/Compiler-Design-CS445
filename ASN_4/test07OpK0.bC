@@ -1,0 +1,22 @@
+#DRBC OpK 
+#DRBC Func: main returns type void [mem: Global loc: 0 size: -2] [line: 15]
+#DRBC .   Child: 1  Compound [mem: None loc: 0 size: -2] [line: 15]
+#DRBC .   .   Child: 1  Op: + of type int [line: 16]
+#DRBC .   .   .   Child: 0  Const 2 of type int [line: 16]
+#DRBC .   .   .   Child: 1  Const 2 of type int [line: 16]
+#DRBC * EXPRESSION                               Comment printed before every ExpK                          
+#DRBC LDC  3,2(6)     Load integer constant      -> child[0]   
+#DRBC                                            if (currnode->child[1]) 
+#DRBC ST  3,-2(1)     Push left side             OpK: If Child[1] exists
+#DRBC * TOFF dec: -3                             OpK: If Child[1] exists  	      
+#DRBC LDC  3,2(6)     Load integer constant      -> child[1]           
+#DRBC * TOFF inc: -2                             OpK: If Child[1] exists 
+#DRBC                                            use this command on the next line
+#DRBC                                            emitRM((char *)"LD", AC1, toffset,#DRBC                                            FP, (char *)"Pop left into ac1");
+#DRBC LD  4,-2(1)     Pop left into ac1          OpK: If Child[1] exists
+#DRBC                                            switch (currnode->attr.op)
+#DRBC                                            case +:    
+#DRBC ADD  3,4,3      Op +                       OpK: attr.op = '+' 
+main() {
+   2 + 2;
+}

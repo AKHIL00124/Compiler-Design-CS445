@@ -1,0 +1,42 @@
+#DRBC Testing production rules //1, 2a, 2b
+int main(){ //3b
+   char testStringB[10];
+   bool goodVibes;
+   int sadCounter, funCounter, numCandy, sugarLevel, peeps;
+   //34a, 35a, 36a, 37b, 37a, 41b, 35b, 39b, 39c
+   testIntB = (*testStringB + 5 - 4) :>: (100 :<: 128 / (133314 % 3));
+   testFuncB(); //46b
+   sadCounter = 8;
+   funCounter = 10;
+   numCandy = 1000;
+   peeps = 10;
+   sugarLevel = 1;
+   goodVibes = true;
+   while(goodVibes == (not false)) do { //19b, 32a, 33e, 31a
+      if(numCandy > 0) then { //19a, 32c
+         numCandy -= peeps; //29c
+         funCounter++; //28b
+         sadCounter--; //28c
+         peeps += (funCounter/sadCounter); //29b
+         sugarLevel *= 10; //29d
+      } else {
+         sadCounter += peeps;
+         peeps /= 2; //29e
+     }
+     //17b, 21a, 29a, 30a, 34a, 34d, 34f
+     if((numCandy <= 50 and peeps >= 40 and funCounter != 25) or sugarLevel > 10000000) then {
+        break; //18g, 27
+     }
+     if(funCounter < sadCounter) then { //33b
+        goodVibes = false;
+     } else {
+     }
+   }
+   for i = 0 to 100 do { // 18c, 19a
+      //20d, 19b, 20b, 20c
+      for j = 0 to 100 by 2 do 
+         if (true == true) then {numCandy += j;}
+         else while (true == false) do if (false != false) then numCandy = -100;
+   }  
+}
+

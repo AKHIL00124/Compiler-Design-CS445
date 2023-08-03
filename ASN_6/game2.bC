@@ -1,0 +1,93 @@
+#DRBC The game of NIM
+#DRBC  Akhil Karri
+
+int myRand () {  // Generate a 4 digit pseudo-random integer  
+  static int next:3251 ; 
+  next = ((next*next)/100)%10000 ; 
+  return next; 
+}
+
+println(char str[]){
+   int i:0;
+   while str[i] != '\0' do {
+      outputc(str[i]);
+      i++;
+   }
+   outnl();
+}
+
+main() {
+    int choice:1;
+
+    while (choice == 1) do {
+       int obj:32;
+       int pl:1;
+       int move;
+
+       println("Welcom to Nim Game.\0");
+       println("You have 32 objects.\0");
+       println("Enter a number between 1 - 4 to remove them\0");
+       println("and the computer will remove <4 objects.\0");
+       println("Last man standing wins!\0");
+        // ----------- Beginning of the main game loop ----------------
+        while (obj > 0) do {
+            if (obj<5) then {
+                println("Someone is going to be a winner soon\0");
+                outnl();
+            }
+            
+            if (pl == 1) then { 
+                println("Player 1 enter your move (1-4):  \0");
+                move = input(); 
+                outnl();
+                while (move < 1 or move > 4 or move > obj) do {
+                    println("Illegal move. \0");
+                    println("Enter a new move (1-4): \0");
+                    move = input();
+                    outnl();
+                }
+            }
+            else { 
+                    if (obj > 1 and obj < 5) then {
+                        move = obj - 1;
+                    }
+                    if (obj == 1) then {
+                        move = 1;
+                    }
+                    else {
+                         move = 1 + myRand() % 4; // random computer move
+                    }
+
+                println("Computer removed \0");
+                output(move);
+                outnl();
+            }
+            obj = obj - move; // implement the move
+            for i=0 to obj do {
+                outputc('#');
+            }
+            output(obj);
+            println(" objects remaining. \0");
+            outnl();
+
+            if (obj>25) then {
+                println("There's still a lot of game left \0");
+                outnl();
+            }
+              
+            pl = (pl+1)%2; // switch players
+        } 
+        // ------------ end of the game loop --------------------------
+        if (pl == 1) then {
+            println("Confgratulations, You won!!! \0");
+            outnl();
+        }
+        else {
+            println("Sorry, you lost \0");
+            outnl();
+        }
+        println("Enter 1 to replay, or any other number to quit:  \0");
+        choice = input();
+        outnl();
+    }
+}
