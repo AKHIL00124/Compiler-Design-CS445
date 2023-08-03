@@ -1,8 +1,11 @@
 # Compiler-Design-CS445
 Fully working Compiler for bC or C- Language  
-## To Build the compiler
+ To Build the compiler
+ ```properties
+make
+```  
   make
-## To run 
+ To run 
   ./bC filename.bC
-## For help
+ For help
   ./bC -h
