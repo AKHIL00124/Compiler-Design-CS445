@@ -1,8 +1,15 @@
 # Compiler-Design-CS445
 Fully working Compiler for bC or C- Language  
- To Build the compiler
-           make
- To run 
-           ./bC filename.bC
+### Instructions
+To Build the compiler
+```console
+make
+```
+ To run
+ ```console
+./bC filename.bC
+```
  For help
-           ./bC -h
+```console
+./bC -h
+```
